@@ -28,6 +28,11 @@ class EntryFragment: Fragment()  {
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.fragment_container_view, MainFragment())?.commit()
         }
+        binding.registration.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.fragment_container_view, RegistrationFragment())
+                ?.addToBackStack("entry")?.commit()
+        }
     }
 
 }

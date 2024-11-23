@@ -19,8 +19,15 @@ class RegistrationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
-
+        setupListener()
         return binding.root
+    }
+
+    private fun setupListener() {
+        binding.back.setOnClickListener {
+            activity?.supportFragmentManager
+                ?.popBackStack()
+        }
     }
 
 }
